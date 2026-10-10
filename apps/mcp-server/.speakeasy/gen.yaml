@@ -31,7 +31,7 @@ generation:
     generateNewTests: true
     skipResponseBodyAssertions: false
 mcp-typescript:
-  version: 0.2.6
+  version: 0.2.7
   additionalDependencies:
     dependencies: {}
     devDependencies: {}
@@ -48,6 +48,7 @@ mcp-typescript:
   inputModelSuffix: input
   maxMethodParams: 0
   multipartArrayFormat: standard
+  numericEnumMemberNames: legacy
   outputModelSuffix: output
   packageName: '@trycompai/mcp-server'
   responseFormat: flat
