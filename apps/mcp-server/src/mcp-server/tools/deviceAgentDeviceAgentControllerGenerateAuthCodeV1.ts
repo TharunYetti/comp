@@ -28,7 +28,7 @@ Create a device-agent auth code in Comp AI. Register employee devices, submit de
       const [result] = await deviceAgentDeviceAgentControllerGenerateAuthCodeV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

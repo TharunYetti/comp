@@ -29,7 +29,7 @@ List connection variables in Comp AI. Connect vendor systems, configure OAuth ap
         await integrationsVariablesControllerGetConnectionVariablesV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

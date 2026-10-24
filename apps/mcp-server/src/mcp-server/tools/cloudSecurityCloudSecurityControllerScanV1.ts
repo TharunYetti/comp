@@ -29,7 +29,7 @@ Trigger a cloud security scan for a connected AWS, Azure, or GCP account and col
     const [result] = await cloudSecurityCloudSecurityControllerScanV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

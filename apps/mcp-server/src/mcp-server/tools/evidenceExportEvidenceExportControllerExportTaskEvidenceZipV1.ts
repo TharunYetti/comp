@@ -29,7 +29,7 @@ Download a ZIP package containing task evidence and automation results for audit
         await evidenceExportEvidenceExportControllerExportTaskEvidenceZipV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

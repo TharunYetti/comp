@@ -22,7 +22,7 @@ Get the configured 2FA source provider in Comp AI. Connect vendor systems, confi
       const [result] =
         await integrationsTwoFactorSourceControllerGetTwoFactorSourceV1(
           client,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

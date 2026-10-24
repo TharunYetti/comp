@@ -20,7 +20,7 @@ Get risk statistics grouped by assignee in Comp AI. Create, update, and report o
   tool: async (client, ctx) => {
     const [result] = await risksRisksControllerGetStatsByAssigneeV1(
       client,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

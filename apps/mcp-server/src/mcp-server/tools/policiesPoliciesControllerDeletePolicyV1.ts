@@ -29,7 +29,7 @@ Delete a compliance policy that is no longer part of the organization evidence l
     const [result] = await policiesPoliciesControllerDeletePolicyV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

@@ -29,7 +29,7 @@ Sync Google Workspace employees in Comp AI. Connect vendor systems, configure OA
         await integrationsSyncControllerSyncGoogleWorkspaceEmployeesV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

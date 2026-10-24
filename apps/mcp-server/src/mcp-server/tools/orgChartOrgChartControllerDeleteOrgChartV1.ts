@@ -29,7 +29,7 @@ Delete the organization chart in Comp AI. Manage organization chart metadata and
     const [result] = await orgChartOrgChartControllerDeleteOrgChartV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

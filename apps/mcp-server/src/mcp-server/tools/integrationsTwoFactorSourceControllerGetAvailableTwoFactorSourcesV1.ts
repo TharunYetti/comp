@@ -22,7 +22,7 @@ List integrations that can supply per-user 2FA status in Comp AI. Connect vendor
       const [result] =
         await integrationsTwoFactorSourceControllerGetAvailableTwoFactorSourcesV1(
           client,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

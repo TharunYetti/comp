@@ -29,7 +29,7 @@ Returns a specific member by ID for the authenticated organization with their us
     const [result] = await peoplePeopleControllerGetPersonByIdV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

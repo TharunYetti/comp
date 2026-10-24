@@ -29,7 +29,7 @@ Create an AI-powered penetration test run for an approved target and track the r
         await securityPenetrationTestsSecurityPenetrationTestsControllerCreateV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

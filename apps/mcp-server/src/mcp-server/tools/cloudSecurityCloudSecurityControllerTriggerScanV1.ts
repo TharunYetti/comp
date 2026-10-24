@@ -28,7 +28,7 @@ Trigger a cloud security run for a connection in Comp AI. Run AWS, Azure, and GC
       const [result] = await cloudSecurityCloudSecurityControllerTriggerScanV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

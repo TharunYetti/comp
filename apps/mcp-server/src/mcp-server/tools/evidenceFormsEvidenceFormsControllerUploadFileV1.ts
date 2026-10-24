@@ -28,7 +28,7 @@ Upload evidence form file in Comp AI. Collect, review, upload, and export struct
       const [result] = await evidenceFormsEvidenceFormsControllerUploadFileV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

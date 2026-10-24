@@ -29,7 +29,7 @@ Upload supporting documentation so Comp AI can process approved source material 
         await knowledgeBaseKnowledgeBaseControllerUploadDocumentV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

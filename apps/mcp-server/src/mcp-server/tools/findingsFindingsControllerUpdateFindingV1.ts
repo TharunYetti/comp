@@ -29,7 +29,7 @@ Update a finding (status transition rules apply) in Comp AI. Create, review, upd
     const [result] = await findingsFindingsControllerUpdateFindingV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

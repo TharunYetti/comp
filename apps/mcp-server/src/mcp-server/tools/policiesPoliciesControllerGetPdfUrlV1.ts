@@ -29,7 +29,7 @@ Get signed URL for policy PDF (alternate path) in Comp AI. Create, version, publ
     const [result] = await policiesPoliciesControllerGetPdfUrlV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

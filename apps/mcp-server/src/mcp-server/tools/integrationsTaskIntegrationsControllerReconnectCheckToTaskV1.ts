@@ -29,7 +29,7 @@ Reconnect checks to a task in Comp AI. Connect vendor systems, configure OAuth a
         await integrationsTaskIntegrationsControllerReconnectCheckToTaskV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

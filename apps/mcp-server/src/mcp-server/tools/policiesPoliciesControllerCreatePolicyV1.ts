@@ -29,7 +29,7 @@ Create a policy record that can be reviewed, versioned, published, linked to con
     const [result] = await policiesPoliciesControllerCreatePolicyV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {
