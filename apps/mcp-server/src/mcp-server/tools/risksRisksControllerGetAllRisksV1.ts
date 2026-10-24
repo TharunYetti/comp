@@ -29,7 +29,7 @@ List organization risks with owners, departments, severity, mitigation status, a
     const [result] = await risksRisksControllerGetAllRisksV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

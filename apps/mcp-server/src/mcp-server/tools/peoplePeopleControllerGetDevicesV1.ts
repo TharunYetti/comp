@@ -20,7 +20,7 @@ Get all employee devices with fleet compliance data in Comp AI. Invite and manag
   tool: async (client, ctx) => {
     const [result] = await peoplePeopleControllerGetDevicesV1(
       client,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

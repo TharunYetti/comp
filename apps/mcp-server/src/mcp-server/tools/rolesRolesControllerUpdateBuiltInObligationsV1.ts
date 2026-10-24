@@ -28,7 +28,7 @@ Override the obligations for a built-in role (e.g., turn off the compliance obli
       const [result] = await rolesRolesControllerUpdateBuiltInObligationsV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

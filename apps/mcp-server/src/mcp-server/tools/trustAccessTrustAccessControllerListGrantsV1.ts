@@ -21,7 +21,7 @@ List active, expired, and revoked Trust Access grants for customer security revi
     tool: async (client, ctx) => {
       const [result] = await trustAccessTrustAccessControllerListGrantsV1(
         client,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

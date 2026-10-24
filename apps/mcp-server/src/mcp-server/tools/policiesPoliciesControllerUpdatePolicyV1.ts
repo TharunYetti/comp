@@ -29,7 +29,7 @@ Update compliance policy details or content while keeping policy workflows conne
     const [result] = await policiesPoliciesControllerUpdatePolicyV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

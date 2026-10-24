@@ -21,7 +21,7 @@ List integration connections in Comp AI. Connect vendor systems, configure OAuth
     tool: async (client, ctx) => {
       const [result] = await integrationsConnectionsControllerListConnectionsV1(
         client,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

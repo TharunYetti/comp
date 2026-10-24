@@ -30,7 +30,7 @@ List pending and completed Trust Center access requests so teams can review cust
         await trustAccessTrustAccessControllerListAccessRequestsV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

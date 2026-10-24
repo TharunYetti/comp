@@ -29,7 +29,7 @@ Delete a comment in Comp AI. Create and manage collaboration comments on complia
     const [result] = await commentsCommentsControllerDeleteCommentV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

@@ -29,7 +29,7 @@ Get all runs for a specific automation in Comp AI. Create, version, run, and ins
         await taskAutomationsAutomationsControllerGetAutomationRunsV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

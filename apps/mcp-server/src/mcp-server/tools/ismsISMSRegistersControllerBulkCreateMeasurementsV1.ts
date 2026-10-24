@@ -30,7 +30,7 @@ Record measurements for several metrics/periods in one save (Metrics due / backf
         await ismsISMSRegistersControllerBulkCreateMeasurementsV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

@@ -29,7 +29,7 @@ Get task templates in Comp AI. Manage compliance task lifecycle, assignments, re
     const [result] = await tasksTasksControllerGetTaskTemplatesV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

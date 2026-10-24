@@ -29,7 +29,7 @@ Remove a custom framework's Trust Portal badge image in Comp AI. Configure the l
         await trustPortalTrustPortalControllerRemoveCustomFrameworkBadgeV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

@@ -27,7 +27,7 @@ Auto-fill a Statement of Applicability draft using organization context and fram
     const [result] = await soaSOAControllerAutoFillV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

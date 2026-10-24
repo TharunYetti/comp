@@ -29,7 +29,7 @@ Upload a PDF or image file and create a submission for the given form type, bypa
         await evidenceFormsEvidenceFormsControllerUploadSubmissionV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

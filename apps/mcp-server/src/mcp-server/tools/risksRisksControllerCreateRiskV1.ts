@@ -29,7 +29,7 @@ Create a risk record with ownership and context so compliance teams can track mi
     const [result] = await risksRisksControllerCreateRiskV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

@@ -29,7 +29,7 @@ Revoke a device agent session in Comp AI. Register employee devices, submit devi
         await deviceAgentDeviceAgentControllerRevokeAgentAccessV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

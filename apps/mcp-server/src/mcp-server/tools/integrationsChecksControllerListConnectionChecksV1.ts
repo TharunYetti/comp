@@ -28,7 +28,7 @@ List checks for a connection in Comp AI. Connect vendor systems, configure OAuth
       const [result] = await integrationsChecksControllerListConnectionChecksV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

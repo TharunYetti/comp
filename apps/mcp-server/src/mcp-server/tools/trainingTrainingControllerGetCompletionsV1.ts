@@ -20,7 +20,7 @@ List security awareness and HIPAA training completion records for workforce comp
   tool: async (client, ctx) => {
     const [result] = await trainingTrainingControllerGetCompletionsV1(
       client,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

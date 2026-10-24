@@ -31,7 +31,7 @@ Transfers organization ownership to another member. The current owner will becom
         await organizationOrganizationControllerTransferOwnershipV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

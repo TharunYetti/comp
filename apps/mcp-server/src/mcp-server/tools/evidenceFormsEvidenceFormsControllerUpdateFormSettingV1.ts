@@ -29,7 +29,7 @@ Update document relevance setting in Comp AI. Collect, review, upload, and expor
         await evidenceFormsEvidenceFormsControllerUpdateFormSettingV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

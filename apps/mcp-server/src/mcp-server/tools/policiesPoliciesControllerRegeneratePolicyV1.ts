@@ -29,7 +29,7 @@ Regenerate policy content using Comp AI while keeping the result reviewable befo
     const [result] = await policiesPoliciesControllerRegeneratePolicyV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

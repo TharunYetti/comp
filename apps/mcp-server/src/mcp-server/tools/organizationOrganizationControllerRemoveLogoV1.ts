@@ -21,7 +21,7 @@ Remove organization logo in Comp AI. Manage organization profile data, API keys,
     tool: async (client, ctx) => {
       const [result] = await organizationOrganizationControllerRemoveLogoV1(
         client,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

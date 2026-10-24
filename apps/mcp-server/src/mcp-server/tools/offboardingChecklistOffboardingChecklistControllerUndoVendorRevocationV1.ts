@@ -30,7 +30,7 @@ Reverses a vendor access revocation for a member, marking that vendor's access a
         await offboardingChecklistOffboardingChecklistControllerUndoVendorRevocationV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

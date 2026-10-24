@@ -29,7 +29,7 @@ Generate a temporary signed URL for a compliance certificate in Comp AI. Configu
         await trustPortalTrustPortalControllerGetComplianceResourceUrlV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

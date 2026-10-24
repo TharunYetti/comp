@@ -29,7 +29,7 @@ Get members who can read a specific resource type in Comp AI. Invite and manage 
     const [result] = await peoplePeopleControllerGetMentionableMembersV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

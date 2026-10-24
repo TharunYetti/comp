@@ -29,7 +29,7 @@ Removes an item from the organization's offboarding checklist template by id so 
         await offboardingChecklistOffboardingChecklistControllerDeleteTemplateItemV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

@@ -22,7 +22,7 @@ Per-user 2FA status from the configured source in Comp AI. Connect vendor system
       const [result] =
         await integrationsTwoFactorSourceControllerGetTwoFactorStatusesV1(
           client,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

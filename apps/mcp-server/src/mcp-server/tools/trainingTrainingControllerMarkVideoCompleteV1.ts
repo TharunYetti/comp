@@ -29,7 +29,7 @@ Marks a specific training video as completed for the authenticated member. Trigg
     const [result] = await trainingTrainingControllerMarkVideoCompleteV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

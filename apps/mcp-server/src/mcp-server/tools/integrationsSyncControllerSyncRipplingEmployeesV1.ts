@@ -28,7 +28,7 @@ Sync Rippling employees in Comp AI. Connect vendor systems, configure OAuth apps
       const [result] = await integrationsSyncControllerSyncRipplingEmployeesV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {
