@@ -29,7 +29,7 @@ Update assignee for multiple tasks in Comp AI. Manage compliance task lifecycle,
     const [result] = await tasksTasksControllerUpdateTasksAssigneeV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

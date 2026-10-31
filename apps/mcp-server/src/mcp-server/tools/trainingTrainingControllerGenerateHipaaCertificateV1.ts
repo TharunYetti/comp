@@ -29,7 +29,7 @@ Generate HIPAA training certificate PDF in Comp AI. Record security awareness an
         await trainingTrainingControllerGenerateHipaaCertificateV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

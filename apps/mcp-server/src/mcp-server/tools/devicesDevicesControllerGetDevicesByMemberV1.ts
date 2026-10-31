@@ -29,7 +29,7 @@ Returns all devices assigned to a specific member within the authenticated organ
     const [result] = await devicesDevicesControllerGetDevicesByMemberV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

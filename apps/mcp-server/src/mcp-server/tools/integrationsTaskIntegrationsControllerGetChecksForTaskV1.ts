@@ -29,7 +29,7 @@ List checks attached to a task in Comp AI. Connect vendor systems, configure OAu
         await integrationsTaskIntegrationsControllerGetChecksForTaskV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

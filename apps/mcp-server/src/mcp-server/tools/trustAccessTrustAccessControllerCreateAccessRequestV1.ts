@@ -29,7 +29,7 @@ Submit a Trust Center access request with requester details, company context, an
         await trustAccessTrustAccessControllerCreateAccessRequestV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

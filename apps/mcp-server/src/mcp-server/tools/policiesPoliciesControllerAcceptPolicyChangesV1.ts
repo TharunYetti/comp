@@ -28,7 +28,7 @@ Accept pending policy changes and publish the version in Comp AI. Create, versio
       const [result] = await policiesPoliciesControllerAcceptPolicyChangesV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

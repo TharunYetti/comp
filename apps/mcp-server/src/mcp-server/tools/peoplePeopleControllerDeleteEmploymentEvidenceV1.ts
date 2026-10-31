@@ -28,7 +28,7 @@ Delete employment evidence in Comp AI. Invite and manage workforce members, trai
       const [result] = await peoplePeopleControllerDeleteEmploymentEvidenceV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

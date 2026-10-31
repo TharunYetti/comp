@@ -23,7 +23,7 @@ List org-authored custom frameworks with their trust portal selection in Comp AI
       const [result] =
         await trustPortalTrustPortalControllerListCustomFrameworksV1(
           client,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

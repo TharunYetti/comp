@@ -29,7 +29,7 @@ Get penetration test PDF in Comp AI. Create AI-powered penetration test runs, tr
         await securityPenetrationTestsSecurityPenetrationTestsControllerGetPdfV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

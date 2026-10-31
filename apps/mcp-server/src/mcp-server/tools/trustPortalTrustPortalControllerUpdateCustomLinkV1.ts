@@ -28,7 +28,7 @@ Update a custom link in Comp AI. Configure the live Trust Center, custom domain,
       const [result] = await trustPortalTrustPortalControllerUpdateCustomLinkV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

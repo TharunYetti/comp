@@ -29,7 +29,7 @@ Retrieve one organization risk with owner, department, likelihood, impact, mitig
     const [result] = await risksRisksControllerGetRiskByIdV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

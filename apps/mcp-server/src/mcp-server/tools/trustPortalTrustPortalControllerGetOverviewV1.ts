@@ -29,7 +29,7 @@ Get trust portal overview in Comp AI. Configure the live Trust Center, custom do
     const [result] = await trustPortalTrustPortalControllerGetOverviewV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

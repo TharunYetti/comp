@@ -29,7 +29,7 @@ Removes a single host (device) from FleetDM by host ID. Only organization owners
     const [result] = await peoplePeopleControllerRemoveHostV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

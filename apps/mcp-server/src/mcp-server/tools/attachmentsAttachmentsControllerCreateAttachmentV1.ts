@@ -28,7 +28,7 @@ Upload a base64-encoded file and attach it to a task, vendor, risk, comment, or 
       const [result] = await attachmentsAttachmentsControllerCreateAttachmentV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

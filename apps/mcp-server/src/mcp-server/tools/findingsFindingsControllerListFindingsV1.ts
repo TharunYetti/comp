@@ -29,7 +29,7 @@ List audit findings with status, severity, owner, history, and remediation conte
     const [result] = await findingsFindingsControllerListFindingsV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

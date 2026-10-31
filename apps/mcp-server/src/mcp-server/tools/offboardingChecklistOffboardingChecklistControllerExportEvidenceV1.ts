@@ -29,7 +29,7 @@ Exports a zip archive of the offboarding checklist evidence collected for a sing
         await offboardingChecklistOffboardingChecklistControllerExportEvidenceV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

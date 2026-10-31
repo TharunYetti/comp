@@ -29,7 +29,7 @@ Retrieve one organization context entry with source details and approved content
     const [result] = await contextContextControllerGetContextByIdV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

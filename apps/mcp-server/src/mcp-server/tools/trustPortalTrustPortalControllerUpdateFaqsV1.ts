@@ -29,7 +29,7 @@ Update trust portal FAQs in Comp AI. Configure the live Trust Center, custom dom
     const [result] = await trustPortalTrustPortalControllerUpdateFaqsV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

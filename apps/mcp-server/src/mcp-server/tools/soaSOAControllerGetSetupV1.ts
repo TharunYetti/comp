@@ -27,7 +27,7 @@ Read SOA configuration and document without creating either in Comp AI. Create, 
     const [result] = await soaSOAControllerGetSetupV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

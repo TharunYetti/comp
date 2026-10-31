@@ -28,7 +28,7 @@ Export evidence form submissions as CSV for auditor requests, offline review, or
       const [result] = await evidenceFormsEvidenceFormsControllerExportCsvV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

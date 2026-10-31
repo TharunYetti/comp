@@ -29,7 +29,7 @@ Delete task attachment in Comp AI. Manage compliance task lifecycle, assignments
     const [result] = await tasksTasksControllerDeleteTaskAttachmentV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

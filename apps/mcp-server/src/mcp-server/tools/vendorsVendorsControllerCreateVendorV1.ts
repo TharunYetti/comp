@@ -29,7 +29,7 @@ Create a vendor record so teams can track third-party risk, assessment evidence,
     const [result] = await vendorsVendorsControllerCreateVendorV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

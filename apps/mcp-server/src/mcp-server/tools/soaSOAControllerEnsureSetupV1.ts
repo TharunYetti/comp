@@ -27,7 +27,7 @@ Ensure SOA configuration and document exist in Comp AI. Create, auto-fill, revie
     const [result] = await soaSOAControllerEnsureSetupV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

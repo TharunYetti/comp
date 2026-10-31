@@ -29,7 +29,7 @@ Get a signed URL for the policy PDF in Comp AI. Create, version, publish, export
     const [result] = await policiesPoliciesControllerGetPdfSignedUrlV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

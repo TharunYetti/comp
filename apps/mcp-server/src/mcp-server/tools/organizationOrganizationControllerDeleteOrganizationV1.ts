@@ -22,7 +22,7 @@ Permanently deletes the authenticated organization. This action cannot be undone
       const [result] =
         await organizationOrganizationControllerDeleteOrganizationV1(
           client,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

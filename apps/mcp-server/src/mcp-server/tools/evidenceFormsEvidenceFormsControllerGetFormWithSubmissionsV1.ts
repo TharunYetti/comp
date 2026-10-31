@@ -29,7 +29,7 @@ Get form definition and submissions in Comp AI. Collect, review, upload, and exp
         await evidenceFormsEvidenceFormsControllerGetFormWithSubmissionsV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

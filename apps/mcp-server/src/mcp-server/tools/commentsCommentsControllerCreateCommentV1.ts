@@ -29,7 +29,7 @@ Create a new comment in Comp AI. Create and manage collaboration comments on com
     const [result] = await commentsCommentsControllerCreateCommentV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {
