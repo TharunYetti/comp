@@ -21,7 +21,7 @@ Remove the trust portal favicon in Comp AI. Configure the live Trust Center, cus
     tool: async (client, ctx) => {
       const [result] = await trustPortalTrustPortalControllerRemoveFaviconV1(
         client,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

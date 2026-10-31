@@ -28,7 +28,7 @@ Sync JumpCloud employees in Comp AI. Connect vendor systems, configure OAuth app
       const [result] = await integrationsSyncControllerSyncJumpCloudEmployeesV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

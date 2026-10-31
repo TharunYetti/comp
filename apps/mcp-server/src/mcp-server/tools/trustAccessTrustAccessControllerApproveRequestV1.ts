@@ -28,7 +28,7 @@ Approve a Trust Center access request, configure the grant window, and start the
       const [result] = await trustAccessTrustAccessControllerApproveRequestV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

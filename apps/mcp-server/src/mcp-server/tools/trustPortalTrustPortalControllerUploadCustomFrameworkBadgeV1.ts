@@ -30,7 +30,7 @@ Stores a PNG/JPEG/WebP badge (max 256KB) in the organization assets bucket. Does
         await trustPortalTrustPortalControllerUploadCustomFrameworkBadgeV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

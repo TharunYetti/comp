@@ -29,7 +29,7 @@ Upload or replace a compliance certificate PDF such as SOC 2, ISO 27001, HIPAA, 
         await trustPortalTrustPortalControllerUploadComplianceResourceV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

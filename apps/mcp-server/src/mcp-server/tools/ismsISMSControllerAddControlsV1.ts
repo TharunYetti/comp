@@ -28,7 +28,7 @@ Map organization controls to an ISMS document in Comp AI.`,
       const [result] = await ismsISMSControllerAddControlsV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

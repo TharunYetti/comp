@@ -29,7 +29,7 @@ Updates an existing offboarding checklist template item by id, changing its labe
         await offboardingChecklistOffboardingChecklistControllerUpdateTemplateItemV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

@@ -29,7 +29,7 @@ Deletes the PDF from a specific policy version. If no versionId is provided, del
     const [result] = await policiesPoliciesControllerDeletePolicyPdfV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

@@ -29,7 +29,7 @@ Get automation details in Comp AI. Create, version, run, and inspect automated e
         await taskAutomationsAutomationsControllerGetAutomationV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

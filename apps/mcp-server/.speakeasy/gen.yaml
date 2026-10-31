@@ -15,6 +15,7 @@ generation:
     sharedErrorComponentsApr2025: true
     sharedNestedComponentsJan2026: true
     nameOverrideFeb2026: true
+    openSingleValueEnumsOct2026: false
   auth:
     oAuth2ClientCredentialsEnabled: false
     oAuth2PasswordEnabled: false
@@ -31,7 +32,7 @@ generation:
     generateNewTests: true
     skipResponseBodyAssertions: false
 mcp-typescript:
-  version: 0.2.6
+  version: 0.3.0
   additionalDependencies:
     dependencies: {}
     devDependencies: {}
@@ -48,6 +49,7 @@ mcp-typescript:
   inputModelSuffix: input
   maxMethodParams: 0
   multipartArrayFormat: standard
+  numericEnumMemberNames: legacy
   outputModelSuffix: output
   packageName: '@trycompai/mcp-server'
   responseFormat: flat

@@ -29,7 +29,7 @@ Create a compliance task for evidence collection, remediation, review, or recurr
     const [result] = await tasksTasksControllerCreateTaskV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

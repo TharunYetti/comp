@@ -22,7 +22,7 @@ Get the currently configured employee sync provider in Comp AI. Connect vendor s
       const [result] =
         await integrationsSyncControllerGetEmployeeSyncProviderV1(
           client,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

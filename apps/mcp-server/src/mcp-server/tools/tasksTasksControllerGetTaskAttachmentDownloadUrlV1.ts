@@ -28,7 +28,7 @@ Generate a signed download URL for an attachment on a compliance task so reviewe
       const [result] = await tasksTasksControllerGetTaskAttachmentDownloadUrlV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

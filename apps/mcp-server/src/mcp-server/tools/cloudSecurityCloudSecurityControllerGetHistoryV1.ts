@@ -29,7 +29,7 @@ List resolution, exception, and regression history for a connection in Comp AI. 
       const [result] = await cloudSecurityCloudSecurityControllerGetHistoryV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

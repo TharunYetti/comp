@@ -29,7 +29,7 @@ Bulk submit tasks for review in Comp AI. Manage compliance task lifecycle, assig
     const [result] = await tasksTasksControllerBulkSubmitForReviewV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

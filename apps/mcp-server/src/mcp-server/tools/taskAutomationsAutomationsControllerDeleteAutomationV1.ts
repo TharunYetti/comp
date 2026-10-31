@@ -29,7 +29,7 @@ Delete an automation in Comp AI. Create, version, run, and inspect automated evi
         await taskAutomationsAutomationsControllerDeleteAutomationV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

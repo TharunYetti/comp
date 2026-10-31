@@ -29,7 +29,7 @@ Update a task item in Comp AI. Manage task items and attachments linked to opera
         await taskManagementTaskManagementControllerUpdateTaskItemV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

@@ -29,7 +29,7 @@ Update an existing automation in Comp AI. Create, version, run, and inspect auto
         await taskAutomationsAutomationsControllerUpdateAutomationV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

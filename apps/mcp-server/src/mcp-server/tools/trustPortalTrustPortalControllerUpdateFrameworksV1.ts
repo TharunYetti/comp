@@ -21,7 +21,7 @@ Update trust portal framework settings in Comp AI. Configure the live Trust Cent
     tool: async (client, ctx) => {
       const [result] = await trustPortalTrustPortalControllerUpdateFrameworksV1(
         client,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

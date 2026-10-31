@@ -28,7 +28,7 @@ Generate a training completion certificate that can be shared with auditors or a
       const [result] = await trainingTrainingControllerGenerateCertificateV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

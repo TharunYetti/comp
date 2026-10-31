@@ -29,7 +29,7 @@ List published custom links shown on an organization Trust Center for customer s
         await trustAccessTrustAccessControllerGetPublicCustomLinksV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

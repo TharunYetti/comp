@@ -29,7 +29,7 @@ Get finding by ID in Comp AI. Create, review, update, and track audit findings, 
     const [result] = await findingsFindingsControllerGetFindingByIdV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

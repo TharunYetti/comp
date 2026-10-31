@@ -29,7 +29,7 @@ Create an integration connection so Comp AI can collect evidence, run checks, or
         await integrationsConnectionsControllerCreateConnectionV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {
