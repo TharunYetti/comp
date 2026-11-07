@@ -21,7 +21,7 @@ Revoke an organization API key when an integration is retired, credentials rotat
     tool: async (client, ctx) => {
       const [result] = await organizationOrganizationControllerRevokeApiKeyV1(
         client,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

@@ -29,7 +29,7 @@ Update vendor ownership, risk attributes, review metadata, and third-party compl
     const [result] = await vendorsVendorsControllerUpdateVendorV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

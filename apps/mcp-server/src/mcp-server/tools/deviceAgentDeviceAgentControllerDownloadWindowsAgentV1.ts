@@ -22,7 +22,7 @@ Downloads a ZIP package containing the Comp AI Device Agent installer for Window
       const [result] =
         await deviceAgentDeviceAgentControllerDownloadWindowsAgentV1(
           client,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

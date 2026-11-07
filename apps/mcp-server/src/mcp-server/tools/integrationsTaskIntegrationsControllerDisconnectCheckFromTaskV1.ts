@@ -29,7 +29,7 @@ Disconnect checks from a task in Comp AI. Connect vendor systems, configure OAut
         await integrationsTaskIntegrationsControllerDisconnectCheckFromTaskV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

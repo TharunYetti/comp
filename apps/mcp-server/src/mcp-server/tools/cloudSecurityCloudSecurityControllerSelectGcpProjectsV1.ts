@@ -29,7 +29,7 @@ Select GCP projects for a connection in Comp AI. Run AWS, Azure, and GCP cloud s
         await cloudSecurityCloudSecurityControllerSelectGcpProjectsV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

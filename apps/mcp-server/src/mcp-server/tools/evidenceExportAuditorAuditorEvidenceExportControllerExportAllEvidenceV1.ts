@@ -30,7 +30,7 @@ Trigger bulk evidence export (Auditor only) in Comp AI. Export all organization 
         await evidenceExportAuditorAuditorEvidenceExportControllerExportAllEvidenceV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

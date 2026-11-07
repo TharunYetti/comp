@@ -29,7 +29,7 @@ Save or update a reusable manual answer for security questionnaires that need ap
         await knowledgeBaseKnowledgeBaseControllerSaveManualAnswerV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

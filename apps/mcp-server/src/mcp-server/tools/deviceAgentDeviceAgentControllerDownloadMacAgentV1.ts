@@ -21,7 +21,7 @@ Downloads the Comp AI Device Agent installer for macOS as a DMG file. The agent 
     tool: async (client, ctx) => {
       const [result] = await deviceAgentDeviceAgentControllerDownloadMacAgentV1(
         client,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

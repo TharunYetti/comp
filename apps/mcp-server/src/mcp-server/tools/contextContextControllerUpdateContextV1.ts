@@ -29,7 +29,7 @@ Update an organization context entry so approved business details stay current f
     const [result] = await contextContextControllerUpdateContextV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

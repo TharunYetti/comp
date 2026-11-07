@@ -28,7 +28,7 @@ Download a device-agent update in Comp AI. Register employee devices, submit dev
       const [result] = await deviceAgentDeviceAgentControllerGetUpdateFileV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

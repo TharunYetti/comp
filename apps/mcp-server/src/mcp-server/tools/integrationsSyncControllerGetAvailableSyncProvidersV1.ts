@@ -29,7 +29,7 @@ List sync providers available to the org in Comp AI. Connect vendor systems, con
         await integrationsSyncControllerGetAvailableSyncProvidersV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

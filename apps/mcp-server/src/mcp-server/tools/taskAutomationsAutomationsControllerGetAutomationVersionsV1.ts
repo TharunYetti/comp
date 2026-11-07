@@ -29,7 +29,7 @@ Get all versions for an automation in Comp AI. Create, version, run, and inspect
         await taskAutomationsAutomationsControllerGetAutomationVersionsV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

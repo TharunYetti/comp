@@ -29,7 +29,7 @@ Reactivate a deactivated member in Comp AI. Invite and manage workforce members,
     const [result] = await peoplePeopleControllerReactivateMemberV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

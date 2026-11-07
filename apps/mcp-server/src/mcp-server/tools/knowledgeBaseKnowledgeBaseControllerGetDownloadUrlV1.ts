@@ -29,7 +29,7 @@ Get a signed download URL for a document in Comp AI. Upload source documents, pr
         await knowledgeBaseKnowledgeBaseControllerGetDownloadUrlV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

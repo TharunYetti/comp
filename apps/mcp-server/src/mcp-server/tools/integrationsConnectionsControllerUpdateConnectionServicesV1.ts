@@ -29,7 +29,7 @@ Set services enabled on a connection in Comp AI. Connect vendor systems, configu
         await integrationsConnectionsControllerUpdateConnectionServicesV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

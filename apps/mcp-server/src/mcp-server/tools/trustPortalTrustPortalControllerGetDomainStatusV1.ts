@@ -28,7 +28,7 @@ Get domain verification status in Comp AI. Configure the live Trust Center, cust
       const [result] = await trustPortalTrustPortalControllerGetDomainStatusV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

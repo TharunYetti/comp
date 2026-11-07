@@ -29,7 +29,7 @@ Aggregates the latest Employee Access check results from every connected integra
     const [result] = await peoplePeopleControllerGetMemberAccessV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

@@ -29,7 +29,7 @@ Send training completion email with certificate in Comp AI. Record security awar
         await trainingTrainingControllerSendTrainingCompletionEmailV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

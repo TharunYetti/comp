@@ -29,7 +29,7 @@ Accepts session, API key, or service token auth. For API key / service token cal
         await cloudSecurityCloudSecurityControllerRevokeExceptionV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

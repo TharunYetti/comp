@@ -21,7 +21,7 @@ List active API keys for an organization so administrators can audit automation 
     tool: async (client, ctx) => {
       const [result] = await organizationOrganizationControllerListApiKeysV1(
         client,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

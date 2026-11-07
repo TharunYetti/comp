@@ -21,7 +21,7 @@ Add or update a custom domain for the trust portal in Comp AI. Configure the liv
     tool: async (client, ctx) => {
       const [result] = await trustPortalTrustPortalControllerAddCustomDomainV1(
         client,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

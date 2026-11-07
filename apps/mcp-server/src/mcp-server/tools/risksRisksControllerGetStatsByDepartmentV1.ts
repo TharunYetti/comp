@@ -20,7 +20,7 @@ Get risk counts grouped by department in Comp AI. Create, update, and report on 
   tool: async (client, ctx) => {
     const [result] = await risksRisksControllerGetStatsByDepartmentV1(
       client,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

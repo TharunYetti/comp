@@ -29,7 +29,7 @@ List organization context entries used as approved source material for evidence,
     const [result] = await contextContextControllerGetAllContextV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

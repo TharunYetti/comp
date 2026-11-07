@@ -29,7 +29,7 @@ List organization audit logs for compliance activity, access changes, evidence u
     const [result] = await auditLogsAuditLogControllerGetAuditLogsV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {
