@@ -29,7 +29,7 @@ Retrieve published Trust Center FAQs for an organization so public trust pages c
     const [result] = await trustAccessTrustAccessControllerGetFaqsV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

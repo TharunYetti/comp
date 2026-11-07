@@ -22,7 +22,7 @@ Exports a zip archive containing the offboarding checklist evidence for every me
       const [result] =
         await offboardingChecklistOffboardingChecklistControllerExportAllEvidenceV1(
           client,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

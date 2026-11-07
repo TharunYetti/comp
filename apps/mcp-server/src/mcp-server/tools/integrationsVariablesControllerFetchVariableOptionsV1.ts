@@ -29,7 +29,7 @@ Get options for a connection variable in Comp AI. Connect vendor systems, config
         await integrationsVariablesControllerFetchVariableOptionsV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

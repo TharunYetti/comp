@@ -30,7 +30,7 @@ Get pending submission count for current user in Comp AI. Collect, review, uploa
         await evidenceFormsEvidenceFormsControllerGetPendingSubmissionCountV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

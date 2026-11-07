@@ -29,7 +29,7 @@ Generate a temporary signed URL for a trust portal document in Comp AI. Configur
         await trustPortalTrustPortalControllerGetTrustDocumentUrlV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

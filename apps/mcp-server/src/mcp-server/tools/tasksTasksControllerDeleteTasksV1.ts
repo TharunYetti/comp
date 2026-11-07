@@ -29,7 +29,7 @@ Delete multiple tasks in Comp AI. Manage compliance task lifecycle, assignments,
     const [result] = await tasksTasksControllerDeleteTasksV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

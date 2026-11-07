@@ -22,7 +22,7 @@ List all manual answers for an organization in Comp AI. Upload source documents,
       const [result] =
         await knowledgeBaseKnowledgeBaseControllerListManualAnswersV1(
           client,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

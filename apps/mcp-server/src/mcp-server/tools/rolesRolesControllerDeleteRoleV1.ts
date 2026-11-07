@@ -29,7 +29,7 @@ Delete a custom role in Comp AI. Create custom roles and resolve permission sets
     const [result] = await rolesRolesControllerDeleteRoleV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

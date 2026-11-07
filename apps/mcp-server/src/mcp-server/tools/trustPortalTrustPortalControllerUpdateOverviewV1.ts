@@ -28,7 +28,7 @@ Update the public Trust Center overview content that explains security posture a
       const [result] = await trustPortalTrustPortalControllerUpdateOverviewV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

@@ -29,7 +29,7 @@ Delete a submission in Comp AI. Collect, review, upload, and export structured e
         await evidenceFormsEvidenceFormsControllerDeleteSubmissionV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

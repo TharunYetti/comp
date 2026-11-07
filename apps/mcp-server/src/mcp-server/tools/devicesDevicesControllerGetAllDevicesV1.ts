@@ -20,7 +20,7 @@ List managed employee devices with endpoint compliance status, ownership, and se
   tool: async (client, ctx) => {
     const [result] = await devicesDevicesControllerGetAllDevicesV1(
       client,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

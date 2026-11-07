@@ -29,7 +29,7 @@ Upload an image as the organization chart in Comp AI. Manage organization chart 
     const [result] = await orgChartOrgChartControllerUploadOrgChartV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

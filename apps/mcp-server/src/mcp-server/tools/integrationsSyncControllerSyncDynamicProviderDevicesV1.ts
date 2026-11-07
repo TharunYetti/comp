@@ -29,7 +29,7 @@ Sync devices for a dynamic provider in Comp AI. Connect vendor systems, configur
         await integrationsSyncControllerSyncDynamicProviderDevicesV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

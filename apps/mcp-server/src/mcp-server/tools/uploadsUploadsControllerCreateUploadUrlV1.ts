@@ -29,7 +29,7 @@ Returns a presigned S3 URL plus the s3Key the file lands at. PUT the raw file by
     const [result] = await uploadsUploadsControllerCreateUploadUrlV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

@@ -29,7 +29,7 @@ Delete a finding (auditor or platform admin only) in Comp AI. Create, review, up
     const [result] = await findingsFindingsControllerDeleteFindingV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

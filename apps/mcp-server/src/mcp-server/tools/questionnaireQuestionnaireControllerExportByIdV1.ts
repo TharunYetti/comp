@@ -28,7 +28,7 @@ Export a saved security questionnaire response package as PDF, CSV, or XLSX for 
       const [result] = await questionnaireQuestionnaireControllerExportByIdV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

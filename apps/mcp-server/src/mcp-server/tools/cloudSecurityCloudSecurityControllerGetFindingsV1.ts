@@ -21,7 +21,7 @@ List cloud security findings discovered by scans so teams can prioritize remedia
     tool: async (client, ctx) => {
       const [result] = await cloudSecurityCloudSecurityControllerGetFindingsV1(
         client,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

@@ -29,7 +29,7 @@ Delete an organization risk that no longer needs active tracking in the risk reg
     const [result] = await risksRisksControllerDeleteRiskV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

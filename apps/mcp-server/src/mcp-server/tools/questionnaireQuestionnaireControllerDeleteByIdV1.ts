@@ -28,7 +28,7 @@ Delete a saved security questionnaire when a customer review or vendor assessmen
       const [result] = await questionnaireQuestionnaireControllerDeleteByIdV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

@@ -29,7 +29,7 @@ Reject a Trust Center access request with a review reason so customer security a
     const [result] = await trustAccessTrustAccessControllerDenyRequestV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

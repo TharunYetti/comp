@@ -29,7 +29,7 @@ Marks a single vendor's access for a departing member as revoked, optionally att
         await offboardingChecklistOffboardingChecklistControllerRevokeVendorAccessV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

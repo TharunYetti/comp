@@ -29,7 +29,7 @@ Get tasks that serve as evidence for a policy, grouped by control in Comp AI. Cr
       const [result] = await policiesPoliciesControllerGetPolicyEvidenceTasksV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

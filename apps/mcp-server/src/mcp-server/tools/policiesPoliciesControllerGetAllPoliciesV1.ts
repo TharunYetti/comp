@@ -29,7 +29,7 @@ Lists active compliance policies by default. Use includeArchived=true to include
     const [result] = await policiesPoliciesControllerGetAllPoliciesV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

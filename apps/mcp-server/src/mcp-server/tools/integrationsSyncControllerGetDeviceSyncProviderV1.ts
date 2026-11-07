@@ -21,7 +21,7 @@ Get the currently configured device sync provider in Comp AI. Connect vendor sys
     tool: async (client, ctx) => {
       const [result] = await integrationsSyncControllerGetDeviceSyncProviderV1(
         client,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

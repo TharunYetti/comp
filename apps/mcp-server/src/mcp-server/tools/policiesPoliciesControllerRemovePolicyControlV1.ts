@@ -28,7 +28,7 @@ Remove a control mapping from a policy in Comp AI. Create, version, publish, exp
       const [result] = await policiesPoliciesControllerRemovePolicyControlV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

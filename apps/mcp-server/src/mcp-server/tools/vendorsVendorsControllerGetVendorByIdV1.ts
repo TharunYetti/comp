@@ -29,7 +29,7 @@ Retrieve one vendor record with ownership, review status, risk context, and thir
     const [result] = await vendorsVendorsControllerGetVendorByIdV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

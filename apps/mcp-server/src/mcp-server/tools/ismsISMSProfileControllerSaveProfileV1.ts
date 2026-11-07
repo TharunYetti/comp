@@ -31,7 +31,7 @@ Save (partial) ISMS wizard answers in Comp AI.`,
     const [result] = await ismsISMSProfileControllerSaveProfileV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

@@ -21,7 +21,7 @@ Get Rippling sync status in Comp AI. Connect vendor systems, configure OAuth app
     tool: async (client, ctx) => {
       const [result] = await integrationsSyncControllerGetRipplingStatusV1(
         client,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

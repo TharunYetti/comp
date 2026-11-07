@@ -29,7 +29,7 @@ Links an uploaded PDF to a compliance policy after the file has been PUT to a pr
         await policiesPoliciesControllerConfirmPolicyPdfUploadedV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

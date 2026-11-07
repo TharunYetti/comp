@@ -29,7 +29,7 @@ Submit version for approval in Comp AI. Create, version, publish, export, map, a
         await policiesPoliciesControllerSubmitVersionForApprovalV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

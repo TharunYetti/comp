@@ -29,7 +29,7 @@ Immediately revoke a Trust Access grant when a customer review ends or shared co
     const [result] = await trustAccessTrustAccessControllerRevokeGrantV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

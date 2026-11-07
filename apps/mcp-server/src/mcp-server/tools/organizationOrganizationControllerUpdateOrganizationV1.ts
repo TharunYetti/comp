@@ -31,7 +31,7 @@ Partially updates the authenticated organization. Only provided fields will be u
         await organizationOrganizationControllerUpdateOrganizationV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {
