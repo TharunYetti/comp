@@ -29,7 +29,7 @@ Returns the offboarding checklist for a specific member, including each item and
         await offboardingChecklistOffboardingChecklistControllerGetMemberChecklistV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

@@ -30,7 +30,7 @@ List all findings for the organization in Comp AI. Create, review, update, and t
         await findingsFindingsControllerGetOrganizationFindingsV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

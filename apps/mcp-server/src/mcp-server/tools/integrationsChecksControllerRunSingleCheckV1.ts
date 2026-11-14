@@ -29,7 +29,7 @@ Run a single check on a connection in Comp AI. Connect vendor systems, configure
     const [result] = await integrationsChecksControllerRunSingleCheckV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

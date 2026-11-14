@@ -13,8 +13,14 @@ export interface Env {
 export const envSchema: z.ZodType<Env> = z.object({
   COMPAI_APIKEY: z.string().optional(),
 
-  COMPAI_DEBUG: z.coerce.boolean().optional(),
+  COMPAI_DEBUG: z.unknown().transform(parseEnvFlag).optional(),
 });
+
+function parseEnvFlag(value: unknown): boolean {
+  return ["true", "1", "yes", "on"].includes(
+    String(value).trim().toLowerCase(),
+  );
+}
 
 let envMemo: Env | undefined = undefined;
 /**

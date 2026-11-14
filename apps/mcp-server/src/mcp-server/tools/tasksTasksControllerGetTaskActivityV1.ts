@@ -29,7 +29,7 @@ Get task activity in Comp AI. Manage compliance task lifecycle, assignments, rev
     const [result] = await tasksTasksControllerGetTaskActivityV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

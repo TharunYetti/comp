@@ -29,7 +29,7 @@ Get current user submissions in Comp AI. Collect, review, upload, and export str
         await evidenceFormsEvidenceFormsControllerGetMySubmissionsV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

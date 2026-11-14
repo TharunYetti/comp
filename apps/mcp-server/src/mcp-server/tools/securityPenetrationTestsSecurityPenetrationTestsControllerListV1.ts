@@ -29,7 +29,7 @@ List penetration test runs in Comp AI. Create AI-powered penetration test runs, 
         await securityPenetrationTestsSecurityPenetrationTestsControllerListV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

@@ -28,7 +28,7 @@ Retrieve one saved security questionnaire, including extracted questions, genera
       const [result] = await questionnaireQuestionnaireControllerFindByIdV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

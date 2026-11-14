@@ -29,7 +29,7 @@ Get task evidence summary in Comp AI. Export task evidence, automation evidence,
         await evidenceExportEvidenceExportControllerGetTaskEvidenceSummaryV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

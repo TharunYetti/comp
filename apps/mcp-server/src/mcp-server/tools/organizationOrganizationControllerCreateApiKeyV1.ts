@@ -21,7 +21,7 @@ Create a scoped API key for server-side compliance automation such as evidence s
     tool: async (client, ctx) => {
       const [result] = await organizationOrganizationControllerCreateApiKeyV1(
         client,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

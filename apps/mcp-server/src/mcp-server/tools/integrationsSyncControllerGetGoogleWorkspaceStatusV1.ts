@@ -22,7 +22,7 @@ Get Google Workspace sync status in Comp AI. Connect vendor systems, configure O
       const [result] =
         await integrationsSyncControllerGetGoogleWorkspaceStatusV1(
           client,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

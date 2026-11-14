@@ -29,7 +29,7 @@ Get submission statuses for all forms in Comp AI. Collect, review, upload, and e
         await evidenceFormsEvidenceFormsControllerGetFormStatusesV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

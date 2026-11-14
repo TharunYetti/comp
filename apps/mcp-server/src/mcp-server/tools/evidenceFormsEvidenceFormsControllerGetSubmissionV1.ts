@@ -29,7 +29,7 @@ Get a single submission in Comp AI. Collect, review, upload, and export structur
         await evidenceFormsEvidenceFormsControllerGetSubmissionV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

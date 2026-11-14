@@ -29,7 +29,7 @@ Set the employee sync provider in Comp AI. Connect vendor systems, configure OAu
         await integrationsSyncControllerSetEmployeeSyncProviderV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

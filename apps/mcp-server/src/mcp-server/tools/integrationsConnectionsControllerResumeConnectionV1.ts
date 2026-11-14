@@ -29,7 +29,7 @@ Resume an integration connection in Comp AI. Connect vendor systems, configure O
         await integrationsConnectionsControllerResumeConnectionV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

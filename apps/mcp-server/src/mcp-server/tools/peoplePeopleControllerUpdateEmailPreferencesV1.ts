@@ -28,7 +28,7 @@ Update current user email notification preferences in Comp AI. Invite and manage
       const [result] = await peoplePeopleControllerUpdateEmailPreferencesV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

@@ -22,7 +22,7 @@ List uploaded knowledge base documents that Comp AI can use as approved source m
       const [result] =
         await knowledgeBaseKnowledgeBaseControllerListDocumentsV1(
           client,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

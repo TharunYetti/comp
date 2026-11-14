@@ -29,7 +29,7 @@ Generate a preview NDA PDF for a Trust Access request before the reviewer signs 
     const [result] = await trustAccessTrustAccessControllerPreviewNdaV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

@@ -28,7 +28,7 @@ List an ISMS document's published version history in Comp AI.`,
       const [result] = await ismsISMSControllerGetVersionsV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

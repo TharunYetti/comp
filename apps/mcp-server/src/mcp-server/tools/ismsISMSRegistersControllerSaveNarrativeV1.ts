@@ -29,7 +29,7 @@ Save a singleton document narrative in Comp AI.`,
     const [result] = await ismsISMSRegistersControllerSaveNarrativeV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

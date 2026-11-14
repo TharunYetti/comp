@@ -29,7 +29,7 @@ Set the 2FA source provider in Comp AI. Connect vendor systems, configure OAuth 
         await integrationsTwoFactorSourceControllerSetTwoFactorSourceV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

@@ -29,7 +29,7 @@ Submit an ISMS document for approval in Comp AI.`,
     const [result] = await ismsISMSControllerSubmitForApprovalV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

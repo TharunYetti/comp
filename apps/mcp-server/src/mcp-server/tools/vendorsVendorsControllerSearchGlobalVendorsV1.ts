@@ -29,7 +29,7 @@ Search global vendor records to prefill vendor profiles and speed up third-party
     const [result] = await vendorsVendorsControllerSearchGlobalVendorsV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {
