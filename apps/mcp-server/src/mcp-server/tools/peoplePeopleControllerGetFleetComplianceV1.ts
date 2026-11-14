@@ -29,7 +29,7 @@ Retrieve Fleet device compliance status so endpoint security findings can suppor
     const [result] = await peoplePeopleControllerGetFleetComplianceV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

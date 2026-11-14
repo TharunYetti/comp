@@ -28,7 +28,7 @@ List recent cloud security activity in Comp AI. Run AWS, Azure, and GCP cloud se
       const [result] = await cloudSecurityCloudSecurityControllerGetActivityV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

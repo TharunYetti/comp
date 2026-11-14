@@ -29,7 +29,7 @@ Get all automations for a task in Comp AI. Create, version, run, and inspect aut
         await taskAutomationsAutomationsControllerGetTaskAutomationsV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

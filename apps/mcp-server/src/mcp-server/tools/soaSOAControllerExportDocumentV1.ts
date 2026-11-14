@@ -29,7 +29,7 @@ Export the approved Statement of Applicability document for ISO 27001 auditors, 
     const [result] = await soaSOAControllerExportDocumentV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

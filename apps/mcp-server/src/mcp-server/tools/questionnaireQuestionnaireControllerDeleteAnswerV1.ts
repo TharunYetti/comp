@@ -28,7 +28,7 @@ Delete a stored questionnaire answer when it should be removed from the active r
       const [result] = await questionnaireQuestionnaireControllerDeleteAnswerV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

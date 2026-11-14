@@ -29,7 +29,7 @@ Permanently removes a member from the organization. This action cannot be undone
     const [result] = await peoplePeopleControllerDeleteMemberV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

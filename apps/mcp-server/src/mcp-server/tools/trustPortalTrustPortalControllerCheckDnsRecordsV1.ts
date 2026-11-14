@@ -21,7 +21,7 @@ Check DNS records for a custom domain in Comp AI. Configure the live Trust Cente
     tool: async (client, ctx) => {
       const [result] = await trustPortalTrustPortalControllerCheckDnsRecordsV1(
         client,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

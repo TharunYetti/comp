@@ -28,7 +28,7 @@ Get a signed view URL for a document in Comp AI. Upload source documents, proces
       const [result] = await knowledgeBaseKnowledgeBaseControllerGetViewUrlV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

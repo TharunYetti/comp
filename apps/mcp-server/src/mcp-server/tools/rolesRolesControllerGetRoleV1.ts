@@ -27,7 +27,7 @@ Get a role by ID in Comp AI. Create custom roles and resolve permission sets for
     const [result] = await rolesRolesControllerGetRoleV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

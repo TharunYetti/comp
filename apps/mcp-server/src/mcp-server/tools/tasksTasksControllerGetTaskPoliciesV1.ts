@@ -29,7 +29,7 @@ Get policies that reference a task via shared controls in Comp AI. Manage compli
     const [result] = await tasksTasksControllerGetTaskPoliciesV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

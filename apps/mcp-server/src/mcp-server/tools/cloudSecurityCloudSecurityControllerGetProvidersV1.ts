@@ -21,7 +21,7 @@ List supported cloud providers in Comp AI. Run AWS, Azure, and GCP cloud securit
     tool: async (client, ctx) => {
       const [result] = await cloudSecurityCloudSecurityControllerGetProvidersV1(
         client,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

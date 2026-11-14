@@ -29,7 +29,7 @@ Resend an NDA signing email for a Trust Access request that still requires revie
     const [result] = await trustAccessTrustAccessControllerResendNdaV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

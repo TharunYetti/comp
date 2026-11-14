@@ -29,7 +29,7 @@ Permanently removes a vendor from the organization. This action cannot be undone
     const [result] = await vendorsVendorsControllerDeleteVendorV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

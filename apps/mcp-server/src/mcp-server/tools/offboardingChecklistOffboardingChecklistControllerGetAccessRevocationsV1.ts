@@ -30,7 +30,7 @@ Lists the vendors a departing member had access to and whether each has been rev
         await offboardingChecklistOffboardingChecklistControllerGetAccessRevocationsV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

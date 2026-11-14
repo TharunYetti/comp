@@ -29,7 +29,7 @@ Update connection variables in Comp AI. Connect vendor systems, configure OAuth 
         await integrationsVariablesControllerSaveConnectionVariablesV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

@@ -31,7 +31,7 @@ Enable/disable a custom framework on the trust portal and set its status in Comp
         await trustPortalTrustPortalControllerUpdateCustomFrameworkV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

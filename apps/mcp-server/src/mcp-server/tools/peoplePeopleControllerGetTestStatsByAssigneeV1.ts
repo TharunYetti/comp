@@ -21,7 +21,7 @@ Get integration test statistics grouped by assignee in Comp AI. Invite and manag
     tool: async (client, ctx) => {
       const [result] = await peoplePeopleControllerGetTestStatsByAssigneeV1(
         client,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

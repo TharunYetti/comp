@@ -29,7 +29,7 @@ Create a new SOA document in Comp AI. Create, auto-fill, review, approve, and ex
     const [result] = await soaSOAControllerCreateDocumentV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

@@ -29,7 +29,7 @@ List additional trust portal documents for the organization in Comp AI. Configur
         await trustPortalTrustPortalControllerListTrustDocumentsV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

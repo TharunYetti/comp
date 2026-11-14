@@ -30,7 +30,7 @@ Resolve the "About this check" description for a finding (AI-cached for AWS; pro
         await cloudSecurityCloudSecurityControllerGetCheckDefinitionV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

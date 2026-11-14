@@ -29,7 +29,7 @@ Attaches a supporting evidence file to a member's completed offboarding checklis
         await offboardingChecklistOffboardingChecklistControllerUploadEvidenceV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

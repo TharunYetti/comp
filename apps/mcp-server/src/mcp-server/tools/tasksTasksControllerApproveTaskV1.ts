@@ -29,7 +29,7 @@ Approve a task that is in review. Only the assigned approver can approve. Moves 
     const [result] = await tasksTasksControllerApproveTaskV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

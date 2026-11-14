@@ -28,7 +28,7 @@ List compliance tasks with assignments and status so teams can track audit readi
       const [result] = await tasksTasksControllerGetTasksV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

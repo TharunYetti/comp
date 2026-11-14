@@ -29,7 +29,7 @@ Disconnect an integration in Comp AI. Connect vendor systems, configure OAuth ap
         await integrationsConnectionsControllerDisconnectConnectionV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

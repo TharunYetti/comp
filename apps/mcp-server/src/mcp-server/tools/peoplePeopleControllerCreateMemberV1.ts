@@ -29,7 +29,7 @@ Adds a new member to the authenticated organization. The user must already exist
     const [result] = await peoplePeopleControllerCreateMemberV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

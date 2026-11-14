@@ -20,7 +20,7 @@ List third-party vendors with risk level, owner, assessment status, and Trust Ce
   tool: async (client, ctx) => {
     const [result] = await vendorsVendorsControllerGetAllVendorsV1(
       client,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

@@ -29,7 +29,7 @@ Retrieve the organization primary brand color used for Trust Center theming, por
         await organizationOrganizationControllerGetPrimaryColorV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

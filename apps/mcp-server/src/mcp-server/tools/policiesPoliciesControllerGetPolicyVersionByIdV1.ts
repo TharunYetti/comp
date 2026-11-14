@@ -28,7 +28,7 @@ Get policy version by ID in Comp AI. Create, version, publish, export, map, and 
       const [result] = await policiesPoliciesControllerGetPolicyVersionByIdV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

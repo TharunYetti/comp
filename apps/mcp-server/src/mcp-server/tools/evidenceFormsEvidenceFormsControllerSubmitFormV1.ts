@@ -28,7 +28,7 @@ Submit structured evidence responses and attachments for review against a compli
       const [result] = await evidenceFormsEvidenceFormsControllerSubmitFormV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

@@ -28,7 +28,7 @@ Publish draft policies in bulk so approved policy content can power Trust Center
       const [result] = await policiesPoliciesControllerPublishAllPoliciesV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

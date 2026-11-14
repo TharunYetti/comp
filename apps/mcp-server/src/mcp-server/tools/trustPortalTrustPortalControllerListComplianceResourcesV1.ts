@@ -29,7 +29,7 @@ List uploaded compliance certificates for the organization in Comp AI. Configure
         await trustPortalTrustPortalControllerListComplianceResourcesV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

@@ -28,7 +28,7 @@ Register a Comp AI Device Agent installation so employee endpoint checks can rep
       const [result] = await deviceAgentDeviceAgentControllerRegisterDeviceV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {
