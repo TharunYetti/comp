@@ -20,7 +20,7 @@ List all roles in Comp AI. Create custom roles and resolve permission sets for o
   tool: async (client, ctx) => {
     const [result] = await rolesRolesControllerListRolesV1(
       client,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

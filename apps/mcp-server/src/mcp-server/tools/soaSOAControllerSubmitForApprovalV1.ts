@@ -29,7 +29,7 @@ Submit SOA document for approval in Comp AI. Create, auto-fill, review, approve,
     const [result] = await soaSOAControllerSubmitForApprovalV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

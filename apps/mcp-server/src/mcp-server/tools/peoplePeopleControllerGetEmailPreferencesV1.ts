@@ -21,7 +21,7 @@ Get current user email notification preferences in Comp AI. Invite and manage wo
     tool: async (client, ctx) => {
       const [result] = await peoplePeopleControllerGetEmailPreferencesV1(
         client,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

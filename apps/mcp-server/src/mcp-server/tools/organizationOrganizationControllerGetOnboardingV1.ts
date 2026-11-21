@@ -21,7 +21,7 @@ Get organization onboarding status in Comp AI. Manage organization profile data,
     tool: async (client, ctx) => {
       const [result] = await organizationOrganizationControllerGetOnboardingV1(
         client,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

@@ -29,7 +29,7 @@ Permanently removes a context entry from the organization. This action cannot be
     const [result] = await contextContextControllerDeleteContextV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

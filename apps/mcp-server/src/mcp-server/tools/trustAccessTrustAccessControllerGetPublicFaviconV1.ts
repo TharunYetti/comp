@@ -28,7 +28,7 @@ Retrieve the favicon URL used by a published Trust Center so embedded or mirrore
       const [result] = await trustAccessTrustAccessControllerGetPublicFaviconV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

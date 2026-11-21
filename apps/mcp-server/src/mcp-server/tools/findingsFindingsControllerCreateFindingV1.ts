@@ -29,7 +29,7 @@ Create an audit finding so teams can track issue ownership, remediation activity
     const [result] = await findingsFindingsControllerCreateFindingV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

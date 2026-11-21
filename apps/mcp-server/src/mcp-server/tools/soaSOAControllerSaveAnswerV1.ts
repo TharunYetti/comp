@@ -27,7 +27,7 @@ Save a SOA answer in Comp AI. Create, auto-fill, review, approve, and export ISO
     const [result] = await soaSOAControllerSaveAnswerV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

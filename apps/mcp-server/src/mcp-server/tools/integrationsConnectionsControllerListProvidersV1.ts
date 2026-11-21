@@ -28,7 +28,7 @@ List available integration providers that can connect to the organization for au
       const [result] = await integrationsConnectionsControllerListProvidersV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

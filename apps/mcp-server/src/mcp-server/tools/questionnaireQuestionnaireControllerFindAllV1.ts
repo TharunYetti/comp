@@ -21,7 +21,7 @@ List saved security questionnaires for an organization so teams can track custom
     tool: async (client, ctx) => {
       const [result] = await questionnaireQuestionnaireControllerFindAllV1(
         client,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

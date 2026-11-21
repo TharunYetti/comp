@@ -29,7 +29,7 @@ Creates a new context entry for the authenticated organization. All required fie
     const [result] = await contextContextControllerCreateContextV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

@@ -29,7 +29,7 @@ Approve or reject a submitted evidence form so task status and audit readiness r
         await evidenceFormsEvidenceFormsControllerReviewSubmissionV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

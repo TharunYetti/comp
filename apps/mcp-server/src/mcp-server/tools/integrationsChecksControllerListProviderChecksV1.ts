@@ -28,7 +28,7 @@ List check definitions for a provider in Comp AI. Connect vendor systems, config
       const [result] = await integrationsChecksControllerListProviderChecksV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

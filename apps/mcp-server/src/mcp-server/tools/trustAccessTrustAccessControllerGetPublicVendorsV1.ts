@@ -28,7 +28,7 @@ List published vendors and subprocessors for an organization Trust Center so rev
       const [result] = await trustAccessTrustAccessControllerGetPublicVendorsV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

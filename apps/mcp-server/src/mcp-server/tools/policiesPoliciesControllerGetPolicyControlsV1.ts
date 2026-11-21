@@ -29,7 +29,7 @@ Get mapped and all controls for a policy in Comp AI. Create, version, publish, e
     const [result] = await policiesPoliciesControllerGetPolicyControlsV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

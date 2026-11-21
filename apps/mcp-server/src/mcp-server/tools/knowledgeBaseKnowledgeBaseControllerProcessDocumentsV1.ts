@@ -29,7 +29,7 @@ Start document processing so uploaded knowledge base files become searchable sou
         await knowledgeBaseKnowledgeBaseControllerProcessDocumentsV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

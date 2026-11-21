@@ -6,9 +6,8 @@ import { CompAiCore } from "../core.js";
 import { encodeSimple } from "../lib/encodings.js";
 import { compactMap } from "../lib/primitives.js";
 import { safeParse } from "../lib/schemas.js";
-import { RequestOptions } from "../lib/sdks.js";
+import { encodePath, RequestOptions } from "../lib/sdks.js";
 import { extractSecurity, resolveGlobalSecurity } from "../lib/security.js";
-import { pathToFunc } from "../lib/url.js";
 import {
   ConnectionsControllerDisconnectConnectionV1Request,
   ConnectionsControllerDisconnectConnectionV1Request$zodSchema,
@@ -95,9 +94,14 @@ async function $do(
       charEncoding: "percent",
     }),
   };
-  const path$ = pathToFunc("/v1/integrations/connections/{id}/disconnect")(
+  const pathResult$ = encodePath(
+    "/v1/integrations/connections/{id}/disconnect",
     pathParams$,
   );
+  if (!pathResult$.ok) {
+    return [pathResult$, { status: "invalid" }];
+  }
+  const path$ = pathResult$.value;
 
   const headers$ = new Headers(compactMap({
     Accept: "*/*",

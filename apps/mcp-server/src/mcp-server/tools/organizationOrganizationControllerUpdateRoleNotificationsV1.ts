@@ -29,7 +29,7 @@ Update role notification settings in Comp AI. Manage organization profile data, 
         await organizationOrganizationControllerUpdateRoleNotificationsV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

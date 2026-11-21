@@ -29,7 +29,7 @@ Retrieve a single compliance policy by its ID, including current content, draft 
     const [result] = await policiesPoliciesControllerGetPolicyV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

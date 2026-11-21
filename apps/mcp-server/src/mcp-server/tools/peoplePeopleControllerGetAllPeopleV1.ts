@@ -29,7 +29,7 @@ List employees and contractors with onboarding, training, device, and compliance
     const [result] = await peoplePeopleControllerGetAllPeopleV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

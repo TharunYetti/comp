@@ -29,7 +29,7 @@ Get policy versions in Comp AI. Create, version, publish, export, map, and impro
     const [result] = await policiesPoliciesControllerGetPolicyVersionsV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

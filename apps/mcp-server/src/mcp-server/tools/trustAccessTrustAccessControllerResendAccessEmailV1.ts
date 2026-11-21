@@ -29,7 +29,7 @@ Resend the access email for an active Trust Access grant so approved reviewers c
         await trustAccessTrustAccessControllerResendAccessEmailV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {
