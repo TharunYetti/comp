@@ -6,9 +6,8 @@ import { CompAiCore } from "../core.js";
 import { encodeFormQuery, encodeJSON, encodeSimple } from "../lib/encodings.js";
 import { compactMap } from "../lib/primitives.js";
 import { safeParse } from "../lib/schemas.js";
-import { RequestOptions } from "../lib/sdks.js";
+import { encodePath, RequestOptions } from "../lib/sdks.js";
 import { resolveSecurity } from "../lib/security.js";
-import { pathToFunc } from "../lib/url.js";
 import {
   ControlsControllerLinkTasksV1Request,
   ControlsControllerLinkTasksV1Request$zodSchema,
@@ -94,9 +93,11 @@ async function $do(
       charEncoding: "percent",
     }),
   };
-  const path$ = pathToFunc("/v1/controls/{id}/tasks/link")(
-    pathParams$,
-  );
+  const pathResult$ = encodePath("/v1/controls/{id}/tasks/link", pathParams$);
+  if (!pathResult$.ok) {
+    return [pathResult$, { status: "invalid" }];
+  }
+  const path$ = pathResult$.value;
   const query$ = encodeFormQuery({
     "frameworkInstanceId": payload$.frameworkInstanceId,
   });

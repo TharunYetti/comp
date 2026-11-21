@@ -28,7 +28,7 @@ Save a manual or AI-generated security questionnaire answer for later review, ex
       const [result] = await questionnaireQuestionnaireControllerSaveAnswerV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

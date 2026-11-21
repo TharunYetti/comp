@@ -22,7 +22,7 @@ List organizations for the current device in Comp AI. Register employee devices,
       const [result] =
         await deviceAgentDeviceAgentControllerGetMyOrganizationsV1(
           client,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

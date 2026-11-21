@@ -29,7 +29,7 @@ Ask policy-specific questions and request draft improvements while preserving hu
     const [result] = await policiesPoliciesControllerAiChatPolicyV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

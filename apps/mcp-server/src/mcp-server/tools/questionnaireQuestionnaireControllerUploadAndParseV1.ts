@@ -29,7 +29,7 @@ Upload a questionnaire payload and start asynchronous parsing, returning a run I
         await questionnaireQuestionnaireControllerUploadAndParseV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

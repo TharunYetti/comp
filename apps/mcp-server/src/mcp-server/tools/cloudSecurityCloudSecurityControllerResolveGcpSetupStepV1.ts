@@ -29,7 +29,7 @@ Resolve a GCP setup step in Comp AI. Run AWS, Azure, and GCP cloud security scan
         await cloudSecurityCloudSecurityControllerResolveGcpSetupStepV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

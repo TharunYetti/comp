@@ -29,7 +29,7 @@ Returns the structured findings discovered during the run. Grows over time durin
         await securityPenetrationTestsSecurityPenetrationTestsControllerGetIssuesV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

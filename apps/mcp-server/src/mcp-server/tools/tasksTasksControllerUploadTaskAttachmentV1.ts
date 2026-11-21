@@ -29,7 +29,7 @@ Upload an evidence attachment to a task so auditors and reviewers can trace comp
     const [result] = await tasksTasksControllerUploadTaskAttachmentV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

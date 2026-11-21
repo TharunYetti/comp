@@ -28,7 +28,7 @@ Exchange an auth code for device credentials in Comp AI. Register employee devic
       const [result] = await deviceAgentDeviceAgentControllerExchangeCodeV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

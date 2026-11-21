@@ -29,7 +29,7 @@ Delete a manual answer in Comp AI. Upload source documents, process them for ret
         await knowledgeBaseKnowledgeBaseControllerDeleteManualAnswerV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

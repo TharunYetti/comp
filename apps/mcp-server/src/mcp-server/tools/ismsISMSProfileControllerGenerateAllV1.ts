@@ -29,7 +29,7 @@ Ensure and regenerate all ISMS documents in Comp AI.`,
     const [result] = await ismsISMSProfileControllerGenerateAllV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

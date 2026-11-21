@@ -29,7 +29,7 @@ Update vendor trust portal settings in Comp AI. Configure the live Trust Center,
         await trustPortalTrustPortalControllerUpdateVendorTrustSettingsV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

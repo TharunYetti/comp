@@ -29,7 +29,7 @@ Detect available cloud services for a connection in Comp AI. Run AWS, Azure, and
         await cloudSecurityCloudSecurityControllerDetectServicesV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

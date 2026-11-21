@@ -29,7 +29,7 @@ Retrieve organization profile data used to personalize compliance workflows, Tru
         await organizationOrganizationControllerGetOrganizationV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

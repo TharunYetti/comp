@@ -28,7 +28,7 @@ Check a device-agent update's metadata in Comp AI. Register employee devices, su
       const [result] = await deviceAgentDeviceAgentControllerHeadUpdateFileV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

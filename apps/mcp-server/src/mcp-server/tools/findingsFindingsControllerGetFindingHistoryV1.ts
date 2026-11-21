@@ -29,7 +29,7 @@ Get activity history for a finding in Comp AI. Create, review, update, and track
     const [result] = await findingsFindingsControllerGetFindingHistoryV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

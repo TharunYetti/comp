@@ -29,7 +29,7 @@ Delete device in Comp AI. Read and manage employee device inventory and Fleet co
     const [result] = await devicesDevicesControllerDeleteDeviceV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

@@ -22,7 +22,7 @@ Lists members whose offboarding checklist is still incomplete, with their outsta
       const [result] =
         await offboardingChecklistOffboardingChecklistControllerGetPendingOffboardingsV1(
           client,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

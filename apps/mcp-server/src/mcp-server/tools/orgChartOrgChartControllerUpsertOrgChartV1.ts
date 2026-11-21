@@ -29,7 +29,7 @@ Create or update an interactive organization chart in Comp AI. Manage organizati
     const [result] = await orgChartOrgChartControllerUpsertOrgChartV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

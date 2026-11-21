@@ -29,7 +29,7 @@ Export an ISMS document as PDF or DOCX in Comp AI.`,
     const [result] = await ismsISMSControllerExportDocumentV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

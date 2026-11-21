@@ -29,7 +29,7 @@ Returns the effective obligations for a built-in role (owner, admin, auditor, em
     const [result] = await rolesRolesControllerGetBuiltInObligationsV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {
