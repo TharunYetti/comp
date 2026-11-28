@@ -21,7 +21,7 @@ Enable or disable the trust portal in Comp AI. Configure the live Trust Center, 
     tool: async (client, ctx) => {
       const [result] = await trustPortalTrustPortalControllerTogglePortalV1(
         client,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

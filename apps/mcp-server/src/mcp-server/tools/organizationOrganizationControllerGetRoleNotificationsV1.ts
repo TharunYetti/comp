@@ -22,7 +22,7 @@ Get role notification settings in Comp AI. Manage organization profile data, API
       const [result] =
         await organizationOrganizationControllerGetRoleNotificationsV1(
           client,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

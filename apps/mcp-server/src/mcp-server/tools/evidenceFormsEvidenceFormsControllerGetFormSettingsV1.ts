@@ -29,7 +29,7 @@ Get document relevance settings in Comp AI. Collect, review, upload, and export 
         await evidenceFormsEvidenceFormsControllerGetFormSettingsV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

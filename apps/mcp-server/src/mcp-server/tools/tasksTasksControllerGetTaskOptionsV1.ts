@@ -20,7 +20,7 @@ Get page options for tasks overview in Comp AI. Manage compliance task lifecycle
   tool: async (client, ctx) => {
     const [result] = await tasksTasksControllerGetTaskOptionsV1(
       client,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

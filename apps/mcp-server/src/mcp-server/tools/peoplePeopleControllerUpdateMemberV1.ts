@@ -29,7 +29,7 @@ Update a workforce member profile, role, department, or compliance metadata used
     const [result] = await peoplePeopleControllerUpdateMemberV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

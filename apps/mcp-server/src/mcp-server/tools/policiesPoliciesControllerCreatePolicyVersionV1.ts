@@ -28,7 +28,7 @@ Creates a new draft version of a policy, cloned from the current published versi
       const [result] = await policiesPoliciesControllerCreatePolicyVersionV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

@@ -22,7 +22,7 @@ Retrieve available API key scopes and permissions before creating credentials fo
       const [result] =
         await organizationOrganizationControllerGetAvailableScopesV1(
           client,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

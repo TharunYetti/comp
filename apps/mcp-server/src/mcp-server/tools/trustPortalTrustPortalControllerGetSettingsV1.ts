@@ -21,7 +21,7 @@ Retrieve Trust Center settings used to configure public status, custom domains, 
     tool: async (client, ctx) => {
       const [result] = await trustPortalTrustPortalControllerGetSettingsV1(
         client,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

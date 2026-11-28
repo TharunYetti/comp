@@ -27,7 +27,7 @@ Detect drift against the approved snapshot in Comp AI.`,
     const [result] = await ismsISMSControllerDriftV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

@@ -28,7 +28,7 @@ Test an integration connection in Comp AI. Connect vendor systems, configure OAu
       const [result] = await integrationsConnectionsControllerTestConnectionV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

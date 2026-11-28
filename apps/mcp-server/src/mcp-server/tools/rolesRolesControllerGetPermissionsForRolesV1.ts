@@ -29,7 +29,7 @@ Returns the merged permissions for the given custom role names. Used by the fron
     const [result] = await rolesRolesControllerGetPermissionsForRolesV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

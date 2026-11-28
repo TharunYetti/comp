@@ -29,7 +29,7 @@ List vendors configured for trust portal in Comp AI. Configure the live Trust Ce
     const [result] = await trustPortalTrustPortalControllerListVendorsV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

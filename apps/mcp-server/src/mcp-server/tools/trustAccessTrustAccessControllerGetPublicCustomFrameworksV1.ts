@@ -29,7 +29,7 @@ Get org-authored custom frameworks shown on a trust portal in Comp AI. Manage ex
         await trustAccessTrustAccessControllerGetPublicCustomFrameworksV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

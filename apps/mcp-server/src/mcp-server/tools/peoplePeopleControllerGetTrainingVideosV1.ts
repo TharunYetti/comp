@@ -29,7 +29,7 @@ Get training video completions for a member in Comp AI. Invite and manage workfo
     const [result] = await peoplePeopleControllerGetTrainingVideosV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

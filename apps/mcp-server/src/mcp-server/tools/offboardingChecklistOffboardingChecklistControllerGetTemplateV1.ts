@@ -22,7 +22,7 @@ Returns the organization's offboarding checklist template: the ordered set of it
       const [result] =
         await offboardingChecklistOffboardingChecklistControllerGetTemplateV1(
           client,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

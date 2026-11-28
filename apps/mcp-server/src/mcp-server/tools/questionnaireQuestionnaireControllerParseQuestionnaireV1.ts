@@ -29,7 +29,7 @@ Parse questionnaire content from a submitted payload so teams can extract securi
         await questionnaireQuestionnaireControllerParseQuestionnaireV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

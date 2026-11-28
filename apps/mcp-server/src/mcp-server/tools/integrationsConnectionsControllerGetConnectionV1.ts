@@ -28,7 +28,7 @@ Get an integration connection by ID in Comp AI. Connect vendor systems, configur
       const [result] = await integrationsConnectionsControllerGetConnectionV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

@@ -29,7 +29,7 @@ Retrieve the published Trust Center overview for an organization, including publ
         await trustAccessTrustAccessControllerGetPublicOverviewV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

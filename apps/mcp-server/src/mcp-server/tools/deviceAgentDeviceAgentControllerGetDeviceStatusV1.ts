@@ -28,7 +28,7 @@ Get device-agent status in Comp AI. Register employee devices, submit device com
       const [result] = await deviceAgentDeviceAgentControllerGetDeviceStatusV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

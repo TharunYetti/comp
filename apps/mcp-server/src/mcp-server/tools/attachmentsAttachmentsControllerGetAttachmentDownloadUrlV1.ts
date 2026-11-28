@@ -29,7 +29,7 @@ Generate a signed download URL for a shared attachment linked to comments, evide
         await attachmentsAttachmentsControllerGetAttachmentDownloadUrlV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

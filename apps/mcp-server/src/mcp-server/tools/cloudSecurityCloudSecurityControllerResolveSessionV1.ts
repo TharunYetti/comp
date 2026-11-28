@@ -30,7 +30,7 @@ Resolve short-lived AWS credentials for a connection (internal only) in Comp AI.
         await cloudSecurityCloudSecurityControllerResolveSessionV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

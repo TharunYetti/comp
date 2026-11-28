@@ -29,7 +29,7 @@ Create a row in an ISMS register in Comp AI.`,
     const [result] = await ismsISMSRegistersControllerCreateRowV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

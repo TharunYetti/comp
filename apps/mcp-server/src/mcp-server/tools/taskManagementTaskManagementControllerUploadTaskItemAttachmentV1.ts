@@ -29,7 +29,7 @@ Upload a file attachment for a task item with proper S3 path structure: org_{org
         await taskManagementTaskManagementControllerUploadTaskItemAttachmentV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

@@ -29,7 +29,7 @@ Update a risk record as mitigation work progresses so compliance reports reflect
     const [result] = await risksRisksControllerUpdateRiskV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

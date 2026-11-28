@@ -29,7 +29,7 @@ Returns the real-time agent activity log emitted during a run (tool calls, obser
         await securityPenetrationTestsSecurityPenetrationTestsControllerGetEventsV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

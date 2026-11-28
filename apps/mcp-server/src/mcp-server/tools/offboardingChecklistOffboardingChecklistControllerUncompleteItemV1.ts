@@ -29,7 +29,7 @@ Reverts a previously completed offboarding checklist item back to incomplete for
         await offboardingChecklistOffboardingChecklistControllerUncompleteItemV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {
