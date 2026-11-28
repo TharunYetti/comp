@@ -29,7 +29,7 @@ Generates a presigned S3 URL for uploading a policy PDF directly to storage. Use
         await policiesPoliciesControllerRequestPolicyPdfUploadUrlV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

@@ -23,7 +23,7 @@ Grants hasAccess on the active organization if the requesting user is an interna
       const [result] =
         await organizationOrganizationAccessControllerAutoApproveV1(
           client,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

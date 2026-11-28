@@ -21,7 +21,7 @@ Upload a favicon for the trust portal in Comp AI. Configure the live Trust Cente
     tool: async (client, ctx) => {
       const [result] = await trustPortalTrustPortalControllerUploadFaviconV1(
         client,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

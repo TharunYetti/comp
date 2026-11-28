@@ -29,7 +29,7 @@ Get the organization chart in Comp AI. Manage organization chart metadata and ev
     const [result] = await orgChartOrgChartControllerGetOrgChartV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

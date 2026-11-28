@@ -21,7 +21,7 @@ Get JumpCloud sync status in Comp AI. Connect vendor systems, configure OAuth ap
     tool: async (client, ctx) => {
       const [result] = await integrationsSyncControllerGetJumpCloudStatusV1(
         client,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

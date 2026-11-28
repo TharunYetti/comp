@@ -28,7 +28,7 @@ Publishes a draft policy version, making it the active/current version of the po
       const [result] = await policiesPoliciesControllerPublishPolicyVersionV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

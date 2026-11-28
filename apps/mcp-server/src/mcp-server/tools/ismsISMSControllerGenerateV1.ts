@@ -27,7 +27,7 @@ Derive Context-of-the-Organization issues in Comp AI.`,
     const [result] = await ismsISMSControllerGenerateV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

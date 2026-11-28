@@ -29,7 +29,7 @@ Submit task for review in Comp AI. Manage compliance task lifecycle, assignments
     const [result] = await tasksTasksControllerSubmitForReviewV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

@@ -28,7 +28,7 @@ Set active policy version in Comp AI. Create, version, publish, export, map, and
       const [result] = await policiesPoliciesControllerSetActivePolicyVersionV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

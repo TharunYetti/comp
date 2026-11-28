@@ -29,7 +29,7 @@ Update allowed emails for the trust portal in Comp AI. Configure the live Trust 
         await trustPortalTrustPortalControllerUpdateAllowedEmailsV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

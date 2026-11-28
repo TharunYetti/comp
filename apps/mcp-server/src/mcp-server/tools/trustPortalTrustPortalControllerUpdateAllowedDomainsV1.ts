@@ -22,7 +22,7 @@ Update allowed domains for the trust portal in Comp AI. Configure the live Trust
       const [result] =
         await trustPortalTrustPortalControllerUpdateAllowedDomainsV1(
           client,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

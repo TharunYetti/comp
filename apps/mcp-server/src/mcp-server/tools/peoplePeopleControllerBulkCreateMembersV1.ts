@@ -29,7 +29,7 @@ Bulk adds multiple members to the authenticated organization. Each member must h
     const [result] = await peoplePeopleControllerBulkCreateMembersV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

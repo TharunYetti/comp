@@ -30,7 +30,7 @@ Show or hide the Security Questionnaire on the public trust portal in Comp AI. C
         await trustPortalTrustPortalControllerUpdateSecurityQuestionnaireV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {

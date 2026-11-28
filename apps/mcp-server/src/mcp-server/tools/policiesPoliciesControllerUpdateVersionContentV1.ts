@@ -28,7 +28,7 @@ Update version content in Comp AI. Create, version, publish, export, map, and im
       const [result] = await policiesPoliciesControllerUpdateVersionContentV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

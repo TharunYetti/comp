@@ -29,7 +29,7 @@ Update status for multiple tasks in Comp AI. Manage compliance task lifecycle, a
     const [result] = await tasksTasksControllerUpdateTasksStatusV1(
       client,
       args.request,
-      { fetchOptions: { signal: ctx.signal } },
+      { fetchOptions: { signal: ctx.mcpReq.signal } },
     ).$inspect();
 
     if (!result.ok) {

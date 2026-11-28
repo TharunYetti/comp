@@ -28,7 +28,7 @@ Generate a single PDF bundle of published compliance policies for auditors, cust
       const [result] = await policiesPoliciesControllerDownloadAllPoliciesV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

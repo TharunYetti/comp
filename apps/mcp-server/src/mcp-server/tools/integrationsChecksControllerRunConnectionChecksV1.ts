@@ -28,7 +28,7 @@ Run all compliance checks for an integration connection and capture results as a
       const [result] = await integrationsChecksControllerRunConnectionChecksV1(
         client,
         args.request,
-        { fetchOptions: { signal: ctx.signal } },
+        { fetchOptions: { signal: ctx.mcpReq.signal } },
       ).$inspect();
 
       if (!result.ok) {

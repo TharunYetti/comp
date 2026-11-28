@@ -30,7 +30,7 @@ Whether the org offers the AI-assisted Security Questionnaire on its public trus
         await trustAccessTrustAccessControllerGetPublicSecurityQuestionnaireV1(
           client,
           args.request,
-          { fetchOptions: { signal: ctx.signal } },
+          { fetchOptions: { signal: ctx.mcpReq.signal } },
         ).$inspect();
 
       if (!result.ok) {
